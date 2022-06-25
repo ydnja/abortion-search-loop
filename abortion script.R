@@ -11,8 +11,8 @@
 
 ###---CHECK AND INSTALL TWO PACKAGES---###
 list.of.packages <- c(
-  "purrr",
   "rvest",
+  "tidyverse"
 )
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages) > 0){
