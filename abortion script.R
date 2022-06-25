@@ -46,6 +46,11 @@ urls <- list('https://www.google.com/search?q=where+to+get+abortion+now',
           'https://www.google.com/search?q=how+do+i+get+an+abortion', 
           'https://www.google.com/search?q=where+can+i+get+an+abortion'
           )
-###---RUN THIS ITERATION AFTER RUNNING THE PREVIOUS---###
+###---RUN THIS ITERATION AFTER RUNNING THE PREVIOUS COMMANDS---###
 urls %>% 
   lapply(read_html)
+
+#after running the above function for a few times, close the connections
+for (i in seq_along(urls)){function(i)
+  closeAllConnections(i)
+}
